@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Heart, Share2, MapPin, Eye, Star, Phone, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useAppStore } from '../store/useAppStore';
 import { useAuthStore } from '../store/useAuthStore';
-import { CATEGORY_LABELS } from '../types';
+import { CATEGORY_LABELS, Category } from '../types';
 import { useState, useEffect } from 'react';
 import { productsApi } from '../services/api';
 import { useLanguageStore } from '../store/useLanguageStore';
@@ -227,7 +227,7 @@ export default function ProductPage() {
             {/* Thumbnails - Desktop */}
             {images.length > 1 && (
               <div className="hidden md:flex gap-3 mt-4">
-                {images.map((img, i) => (
+                {images.map((img: string, i: number) => (
                   <button
                     key={i}
                     onClick={() => {
@@ -253,7 +253,7 @@ export default function ProductPage() {
             {/* Image indicators - Mobile */}
             {images.length > 1 && (
               <div className="flex justify-center gap-1.5 py-3 md:hidden">
-                {images.map((_, i) => (
+                {images.map((_: string, i: number) => (
                   <button
                     key={i}
                     onClick={() => setCurrentImage(i)}
@@ -311,7 +311,7 @@ export default function ProductPage() {
               </div>
               
               <span className="inline-block mt-4 px-3 py-1.5 bg-earth-100 text-earth-600 text-sm rounded-full">
-                {CATEGORY_LABELS[product.category]}
+                {CATEGORY_LABELS[product.category as Category] || product.category}
               </span>
 
               {/* Contact buttons - Desktop */}
