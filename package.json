@@ -1,0 +1,14 @@
+{
+  "name": "dehqonjon",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n \"FRONT,BACK\" -c \"cyan,green\" \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && py -m uvicorn app.main:app --reload --port 8000",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

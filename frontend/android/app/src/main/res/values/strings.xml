@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dehqonjon</string>
+    <string name="title_activity_main">Dehqonjon</string>
+    <string name="package_name">uz.dehqonjon.app</string>
+    <string name="custom_url_scheme">uz.dehqonjon.app</string>
+</resources>

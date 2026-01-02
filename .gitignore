@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+coverage/
+.pytest_cache/
+.coverage
+
+# Misc
+*.bak
+*.tmp
+
+# Database files (не нужны в репо)
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads (пользовательские файлы)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Backend .git (вложенный репозиторий)
+backend/.git/
+
+# Capacitor native builds (генерируются автоматически)
+frontend/ios/
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/release/
+
+# Capacitor plugins cache
+frontend/android/.cxx/
