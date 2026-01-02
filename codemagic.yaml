@@ -1,88 +1,5 @@
 workflows:
-  # Android сборка
-  android-build:
-    name: Android Build
-    max_build_duration: 30
-    instance_type: linux_x2
-    environment:
-      java: 17
-      node: 18
-      groups:
-        - android_signing # Опционально: для подписи APK
-    triggering:
-      events: []  # Пустой = только manual trigger
-    scripts:
-      - name: Install dependencies
-        script: |
-          cd frontend
-          npm install
-      
-      - name: Build web app
-        script: |
-          cd frontend
-          npm run build
-      
-      - name: Sync Capacitor
-        script: |
-          cd frontend
-          npx cap sync android
-      
-      - name: Build Android APK
-        script: |
-          cd frontend/android
-          ./gradlew assembleDebug
-    
-    artifacts:
-      - frontend/android/app/build/outputs/**/*.apk
-    
-    publishing:
-      email:
-        recipients:
-          - your-email@example.com  # Замени на свой email
-        notify:
-          success: true
-          failure: true
-
-  # Android Release (подписанный APK)
-  android-release:
-    name: Android Release
-    max_build_duration: 30
-    instance_type: linux_x2
-    environment:
-      java: 17
-      node: 18
-      groups:
-        - android_signing
-      vars:
-        PACKAGE_NAME: "uz.dehqonjon.app"
-    triggering:
-      events: []
-    scripts:
-      - name: Install dependencies
-        script: |
-          cd frontend
-          npm install
-      
-      - name: Build web app
-        script: |
-          cd frontend
-          npm run build
-      
-      - name: Sync Capacitor
-        script: |
-          cd frontend
-          npx cap sync android
-      
-      - name: Build Android Release
-        script: |
-          cd frontend/android
-          ./gradlew assembleRelease
-    
-    artifacts:
-      - frontend/android/app/build/outputs/**/*.apk
-      - frontend/android/app/build/outputs/**/mapping.txt
-
-  # iOS сборка
+  # iOS сборка для тестирования
   ios-build:
     name: iOS Build
     max_build_duration: 60
@@ -92,7 +9,7 @@ workflows:
       node: 18
       cocoapods: default
     triggering:
-      events: []
+      events: []  # Только manual trigger
     scripts:
       - name: Install dependencies
         script: |
@@ -103,7 +20,7 @@ workflows:
         script: |
           cd frontend
           npm install @capacitor/ios
-          npx cap add ios || true  # Игнорируем если уже добавлено
+          npx cap add ios || true
       
       - name: Build web app
         script: |
@@ -133,9 +50,9 @@ workflows:
     artifacts:
       - frontend/ios/App/build/**/*.app
 
-  # iOS Release (для App Store)
+  # iOS Release для App Store
   ios-release:
-    name: iOS Release
+    name: iOS Release (App Store)
     max_build_duration: 60
     instance_type: mac_mini_m1
     environment:
@@ -143,7 +60,7 @@ workflows:
       node: 18
       cocoapods: default
       groups:
-        - ios_signing  # Нужны сертификаты Apple
+        - ios_signing
     triggering:
       events: []
     scripts:
