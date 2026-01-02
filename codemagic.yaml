@@ -6,7 +6,6 @@ workflows:
     environment:
       xcode: latest
       node: 22
-      cocoapods: default
     triggering:
       events: []
     scripts:
@@ -21,25 +20,16 @@ workflows:
           cd frontend
           npm run build
       
-      - name: Setup iOS and build
+      - name: Setup iOS
         script: |
           cd frontend
-          
-          # Add iOS platform
-          npx cap add ios || echo "iOS platform may already exist"
-          
-          # Sync
+          npx cap add ios || echo "iOS already exists"
           npx cap sync ios
-          
-          # Check if ios folder exists
-          ls -la ios/
-          
-          # Install pods
-          cd ios/App
-          pod install
-          
-          # Build
-          xcodebuild -workspace App.xcworkspace \
+      
+      - name: Build iOS (Simulator)
+        script: |
+          cd frontend/ios/App
+          xcodebuild -project App.xcodeproj \
             -scheme App \
             -configuration Debug \
             -destination 'generic/platform=iOS Simulator' \
@@ -56,7 +46,6 @@ workflows:
     environment:
       xcode: latest
       node: 22
-      cocoapods: default
       groups:
         - ios_signing
     triggering:
@@ -76,23 +65,21 @@ workflows:
       - name: Setup iOS
         script: |
           cd frontend
-          npx cap add ios || echo "iOS platform may already exist"
+          npx cap add ios || echo "iOS already exists"
           npx cap sync ios
-          cd ios/App
-          pod install
       
       - name: Set up code signing
         script: |
           keychain initialize
           app-store-connect fetch-signing-files "uz.dehqonjon.app" --type IOS_APP_STORE
           keychain add-certificates
-          xcode-project use-profiles
+          xcode-project use-profiles --project frontend/ios/App/App.xcodeproj
       
       - name: Build IPA
         script: |
           cd frontend/ios/App
           xcode-project build-ipa \
-            --workspace App.xcworkspace \
+            --project App.xcodeproj \
             --scheme App
     
     artifacts:
