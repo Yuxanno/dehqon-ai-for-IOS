@@ -9,27 +9,27 @@ workflows:
       node: 22
       cocoapods: default
     triggering:
-      events: []  # Только manual trigger
+      events: []
     scripts:
       - name: Install dependencies
         script: |
           cd frontend
           npm install
       
-      - name: Add iOS platform
+      - name: Install Capacitor iOS
         script: |
           cd frontend
           npm install @capacitor/ios
-          npx cap add ios || true
       
       - name: Build web app
         script: |
           cd frontend
           npm run build
       
-      - name: Sync Capacitor iOS
+      - name: Add iOS platform and sync
         script: |
           cd frontend
+          npx cap add ios || true
           npx cap sync ios
       
       - name: Install CocoaPods
@@ -69,20 +69,20 @@ workflows:
           cd frontend
           npm install
       
-      - name: Add iOS platform
+      - name: Install Capacitor iOS
         script: |
           cd frontend
           npm install @capacitor/ios
-          npx cap add ios || true
       
       - name: Build web app
         script: |
           cd frontend
           npm run build
       
-      - name: Sync Capacitor iOS
+      - name: Add iOS platform and sync
         script: |
           cd frontend
+          npx cap add ios || true
           npx cap sync ios
       
       - name: Install CocoaPods
