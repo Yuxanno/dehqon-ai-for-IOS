@@ -6,7 +6,7 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       xcode: latest
-      node: 18
+      node: 22
       cocoapods: default
     triggering:
       events: []  # Только manual trigger
@@ -57,7 +57,7 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       xcode: latest
-      node: 18
+      node: 22
       cocoapods: default
       groups:
         - ios_signing
