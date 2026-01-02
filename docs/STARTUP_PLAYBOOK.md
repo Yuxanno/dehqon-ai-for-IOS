@@ -1,205 +1,269 @@
-# 🌾 STARTUP PLAYBOOK
+# 🚀 DEHQONJON — FULL STARTUP PLAYBOOK
 
-**Project: Dehqonjon**
-
----
-
-## 1. Vision & Strategy
-
-**Mission:**
-Fermerlar hayotini osonlashtirish — savdo va aqlli maslahatlarni bitta ilovada birlashtirish.
-
-**Vision:**
-Markaziy Osiyoda fermerlar uchun eng qulay va ishonchli marketplace + AI-yordamchi platformaga aylanish.
-
-**Core Values:**
-- Soddalik — foydalanish oson, o'rganish shart emas
-- Tezlik — 3 soniyada e'lon yaratish
-- Ishonch — AI maslahatlar foizli aniqlik bilan
-- Qulaylik — dalada, qo'lda telefon bilan ishlash uchun
-
-**Strategic Goals:**
-- 6 oy ichida 10,000 faol fermer foydalanuvchi
-- AI-konsultant orqali 40%+ foydalanuvchi jalb qilish
-- Marketplace orqali haqiqiy savdo-sotiq boshlash
+**Hujjat turi:** Startup Documentation Framework
+**Bosqich:** MVP / Early-stage (joriy holatdagi real ma’lumotlar)
+**Muhim:** Ba’zi bo‘limlar ataylab **BO‘SH** qoldirilgan — sabablari aniq yozilgan.
 
 ---
 
-## 2. Problem & Solution
+## 1️⃣ Vision & Strategy (Vizyon va Strategiya)
 
-**Problem:**
-- Fermerlar mahsulotlarini sotish uchun qulay platforma yo'q
-- O'simlik kasalliklari haqida tezkor maslahat olish qiyin
-- Mavjud ilovalar murakkab va qishloq sharoitiga mos emas
+### Mission (Missiya)
 
-**Solution:**
-Dehqonjon — fermerlar uchun maxsus yaratilgan:
-- 📦 **Marketplace** — urug'lik, texnika, o'g'it, xizmatlar savdosi
-- 🤖 **AI-yordamchi** — o'simlik kasalliklarini aniqlash, maslahatlar
-- 📱 **Mobile-first** — dalada ishlash uchun optimallashtirilgan
+O‘zbekiston fermerlarining hayotini yengillashtirish: savdo va agro-maslahatlarni sun’iy intellekt (AI) yordamida bitta mobil platformada birlashtirish.
 
-**Unique Value Proposition:**
-Oddiy interfeys + AI diagnostika + mahalliy bozorga moslashgan yechim.
+### Vision (Vizyon)
 
----
+O‘zbekistonda №1 agro-marketpleys va AI-yordamchi platformaga aylanish.
 
-## 3. Market & Customer Analysis
+### Core Values (Asosiy qadriyatlar)
 
-**Target Audience:**
-- Kichik va o'rta fermerlar
-- Qishloq xo'jaligi bilan shug'ullanuvchilar
-- Urug'lik va texnika sotuvchilari
+* Soddalik
+* Amaliy foyda
+* Ishonch
+* Fermer-first (avvalo fermer manfaatlari)
 
-**Market Size:**
-- TAM: Markaziy Osiyo qishloq xo'jaligi bozori
-- SAM: O'zbekiston fermerlari (5+ million)
-- SOM: Mobil ilova ishlatuvchi fermerlar
+### Uzoq muddatli maqsadlar (3–5 yil)
 
-**Competitors:**
-- OLX, Telegram guruhlar (umumiy)
-- Maxsus agro-platformalar kam
+* 500 000+ faol fermer foydalanuvchi
+* Milliy AgroTech platforma
+* Agro-subsidiya va sug‘urta tizimlari bilan integratsiya
 
-**Differentiation:**
-- AI-diagnostika integratsiyasi
-- Fermerlar uchun maxsus UX
-- Mahalliy til va valyuta
+### KPI & Success Metrics (Asosiy ko‘rsatkichlar)
+
+* MAU (Monthly Active Users — oylik faol foydalanuvchilar)
+* Retention D30 (30 kundan keyin qaytish darajasi)
+* AI diagnostika aniqligi
+* Marketplace GMV (umumiy savdo hajmi)
 
 ---
 
-## 4. Product Documentation
+## 2️⃣ Problem & Solution Definition (Muammo va Yechim Ta’rifi)
 
-**Product Vision:**
-"Fermer 3 soniyada e'lon yaratsin, 1 daqiqada kasallik tashxisi olsin."
+### Muammo (real holat)
 
-**MVP Features:**
-- ✅ Marketplace — mahsulot qo'shish, qidirish, kategoriyalar
-- ✅ AI Chat — matnli savol-javob
-- ✅ Rasm yuklash — AI orqali kasallik aniqlash
-- ✅ Foydalanuvchi profili
-- ✅ Sevimlilar ro'yxati
+* Fermerlar mahsulotni asosan bozor va Telegram orqali sotadi
+* Agronomga tezkor murojaat qilish qiyin
+* Kasallik diagnostikasi qimmat va sekin
 
-**Roadmap:**
-- **v1.0** (hozir): Core marketplace + AI chat
-- **v1.5**: Push notifications, offline rejim
-- **v2.0**: Buyurtma tizimi, to'lov integratsiyasi
-- **v3.0**: Ob-havo prognozi, narx tahlili
+### Pain Points (Asosiy og‘riqlar)
 
----
+* Hosil yo‘qotilishi
+* Vaqt yo‘qotish
+* Ishonchsiz ma’lumot manbalari
 
-## 5. Business Model
+### Yechim
 
-**Revenue Model:**
-- Freemium — asosiy funksiyalar bepul
-- Premium e'lonlar — yuqorida ko'rsatish
-- Pro subscription — kengaytirilgan AI
+**Dehqonjon** — mobil platforma:
 
-**Pricing (kelajakda):**
-- Free: Asosiy marketplace + 5 ta AI savol/kun
-- Pro: $3/oy — cheksiz AI, premium e'lonlar
+* Fermerlar uchun marketplace
+* Rasm orqali AI-diagnostika
+* 24/7 AI-konsultatsiya
 
-**Costs:**
-- AI API (OpenAI/Claude)
-- Server hosting
-- Development
+### UVP (Unique Value Proposition — noyob taklif)
+
+O‘zbek tilini qo‘llab-quvvatlovchi birinchi **agro-marketpleys + AI-agronom**.
 
 ---
 
-## 6. Team & HR
+## 3️⃣ Market & Customer Analysis (Bozor va Mijozlar Tahlili)
 
-**Team Structure:**
-- Founder / Product Owner
-- Frontend Developer (React/TypeScript)
-- Backend Developer (Python/FastAPI)
-- UI/UX Designer
+### Target Audience (Maqsadli auditoriya)
 
-**Hiring Priority:**
-- Marketing specialist
-- Customer support (fermerlar bilan aloqa)
+* Kichik va o‘rta fermerlar (1–50 gektar)
+* Qishloq xo‘jaligi do‘konlari
+* Xususiy agronomlar
 
----
+### TAM / SAM / SOM (baholash)
 
-## 7. Technology & Security
+* TAM: ~$10–15 mln (O‘zbekiston AgroTech bozori)
+* SAM: ~$3–5 mln
+* SOM (1–2 yil): ~$300–500 ming
 
-**Tech Stack:**
+### Raqobatchilar
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React 18, TypeScript, Tailwind CSS, Zustand |
-| Backend | Python 3.11+, FastAPI |
-| Database | SQLite (MVP) → PostgreSQL |
-| AI | OpenAI GPT-4 / Claude API |
-| Hosting | Docker, VPS |
+* OLX
+* Telegram guruhlar
+* Oflayn bozorlar
 
-**Security:**
-- JWT authentication
-- CORS configuration
-- Input validation
-- Image upload sanitization
+### Differentiation (Farqlanish)
 
-**PWA Features:**
-- Offline mode (kelajakda)
-- Push notifications (kelajakda)
-- Home screen install
+* AI-diagnostika
+* Fermerlarga mos UX
+* Offline ishlash (PWA)
 
 ---
 
-## 8. Marketing & Growth
+## 4️⃣ Product Documentation (Mahsulot Hujjatlari)
 
-**Channels:**
-- Telegram guruhlar (fermerlar)
-- YouTube — AI demo videolar
-- Mahalliy radio/TV
-- Dehqon bozorlari
+### Product Vision (Mahsulot vizyoni)
 
-**Growth Strategy:**
-- Word-of-mouth — fermerlar bir-biriga tavsiya
-- AI demo — kasallik aniqlash videolari viral
-- Referral — do'stni taklif qil, bonus ol
+“Fermer telefoni” — xo‘jalik uchun kerak bo‘lgan hamma narsa bitta ilovada.
 
-**Sales Funnel:**
-```
-Telegram/YouTube → App download → Free user → Active user → Pro user
-```
+### MVP Scope (hozir tayyor)
 
----
+* Marketplace (e’lonlar)
+* AI chat + Vision
+* Avtorizatsiya
 
-## 9. Monitoring & KPIs
+### Feature Roadmap (Funksiyalar rejasi)
 
-**Key Metrics:**
+* PWA
+* To‘lovlar
+* Reyting va sharhlar
 
-| Metric | Target |
-|--------|--------|
-| Daily Active Users | 1,000+ |
-| AI chat usage | 40%+ users |
-| Marketplace listings | 500+ |
-| User retention (7 kun) | 60%+ |
-| App load time | < 2 sec |
+### UX/UI prinsiplari
 
-**Feedback Loop:**
-- In-app feedback button
-- Telegram support group
-- Monthly user interviews
+* Mobile-first
+* Kam matn
+* Katta va aniq tugmalar
+
+### Texnik arxitektura
+
+* Frontend: React + TypeScript
+* Backend: FastAPI
+* AI: Groq
 
 ---
 
-## 10. Quick Start (Development)
+## 5️⃣ Business Model (Biznes Model)
 
-```bash
-# Install dependencies
-npm run install:all
+### Revenue Streams (Daromad manbalari)
 
-# Run development
-npm run dev
+* Premium e’lonlar
+* AI Pro obuna
+* Reklama
 
-# Frontend: http://localhost:5173
-# Backend: http://localhost:8000
-```
+### Pricing (O‘zbekiston bozori)
 
-**Docker:**
-```bash
-docker-compose up -d
-```
+* Premium: 10 000 so‘m
+* TOP: 25 000 so‘m
+* AI Pro: 50 000 so‘m / oy
+
+### Cost Structure (Xarajatlar)
+
+* Serverlar
+* AI API
+* Qo‘llab-quvvatlash
+
+### Unit Economics
+
+**BO‘SH ❌**
+**Sabab:** barqaror savdo va real hisoblash uchun yetarli ma’lumot yo‘q.
+
+### Scaling Model (Kengayish modeli)
+
+**BO‘SH ❌**
+**Sabab:** avval PMF (Product–Market Fit — mahsulotning bozorga mosligi), keyin masshtablash.
 
 ---
 
-*Dehqonjon — Fermerlar uchun marketplace va AI-yordamchi* 🌾
+## 6️⃣ Operations Protocol (Operatsion Ishlar Tartibi)
+
+**BO‘SH ❌**
+**Sabab:** operatsion jamoa va rasmiy jarayonlar hali shakllanmagan (early-stage).
+
+---
+
+## 7️⃣ Team & HR Documentation (Jamoa va HR Hujjatlari)
+
+### Team Structure (Jamoa tuzilmasi)
+
+* Founder (Product / Tech)
+
+### Roles & Responsibilities
+
+**BO‘SH ❌**
+**Sabab:** jamoa juda kichik (1–2 kishi).
+
+### Hiring / Equity
+
+**BO‘SH ❌**
+**Sabab:** yollash va ulushlar investitsiyadan keyin rejalashtiriladi.
+
+---
+
+## 8️⃣ Legal & Compliance (Yuridik va Qonuniy Moslik)
+
+**BO‘SH ❌**
+**Sabab:** loyiha erta bosqichda, yuridik hujjatlar investitsiya oldidan tayyorlanadi.
+
+---
+
+## 9️⃣ Finance & Investment (Moliya va Investitsiya)
+
+### Financial Model
+
+**BO‘SH ❌**
+**Sabab:** moliyaviy model alohida (Excel / Google Sheets) yuritiladi.
+
+### Funding Strategy (Moliyalashtirish strategiyasi)
+
+* Pre-seed
+* Angel investorlar
+
+---
+
+## 🔟 Marketing & Growth Playbook (Marketing va O‘sish Qo‘llanmasi)
+
+### Kanallar
+
+* Telegram
+* Offline (bozorlar, qishloqlar)
+* Qisqa video kontent
+
+### Sales Funnel (Sotuv voronkasi)
+
+Awareness → Install → First Action → Retention
+
+### Growth Experiments (O‘sish tajribalari)
+
+* Referral
+* Bepul AI so‘rovlar
+
+---
+
+## 1️⃣1️⃣ Technology & Security (Texnologiya va Xavfsizlik)
+
+### Tech Stack
+
+(4-bo‘limga qarang)
+
+### Security Policies
+
+**BO‘SH ❌**
+**Sabab:** enterprise-mijozlar va maxfiy ma’lumotlar hali yo‘q.
+
+### Backup & Recovery
+
+Minimal VPS backup.
+
+---
+
+## 1️⃣2️⃣ Monitoring & Improvement (Monitoring va Yaxshilash)
+
+### Performance Tracking
+
+* MAU
+* Retention
+
+### Feedback Loop
+
+* Telegram
+* Ilova ichidagi fikrlar
+
+### Pivot Rules (Pivot qoidalari — strategiyani o‘zgartirish shartlari)
+
+**BO‘SH ❌**
+**Sabab:** mahsulot hali PMF (Product–Market Fit — bozorga moslik) izlash bosqichida.
+
+---
+
+## 🧠 XULOSA
+
+Bu Playbook — MVP bosqichidagi startap uchun **real va halol hujjat**, “ideal korporatsiya” emas.
+BO‘SH bo‘limlar — bu xato emas, balki loyihaning joriy bosqichi ochiq ko‘rsatilgan.
+
+📌 Loyiha rivojlangani sari bu bo‘limlar bosqichma-bosqich to‘ldiriladi.
+
+🌾 **Dehqonjon — fermerlar uchun, fermerlar bilan**

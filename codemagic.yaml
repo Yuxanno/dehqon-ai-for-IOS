@@ -1,5 +1,4 @@
 workflows:
-  # iOS сборка для тестирования
   ios-build:
     name: iOS Build
     max_build_duration: 60
@@ -15,10 +14,6 @@ workflows:
         script: |
           cd frontend
           npm install
-      
-      - name: Install Capacitor iOS
-        script: |
-          cd frontend
           npm install @capacitor/ios
       
       - name: Build web app
@@ -26,20 +21,24 @@ workflows:
           cd frontend
           npm run build
       
-      - name: Add iOS platform and sync
+      - name: Setup iOS and build
         script: |
           cd frontend
-          npx cap add ios || true
+          
+          # Add iOS platform
+          npx cap add ios || echo "iOS platform may already exist"
+          
+          # Sync
           npx cap sync ios
-      
-      - name: Install CocoaPods
-        script: |
-          cd frontend/ios/App
+          
+          # Check if ios folder exists
+          ls -la ios/
+          
+          # Install pods
+          cd ios/App
           pod install
-      
-      - name: Build iOS (Simulator)
-        script: |
-          cd frontend/ios/App
+          
+          # Build
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
             -configuration Debug \
@@ -50,7 +49,6 @@ workflows:
     artifacts:
       - frontend/ios/App/build/**/*.app
 
-  # iOS Release для App Store
   ios-release:
     name: iOS Release (App Store)
     max_build_duration: 60
@@ -68,10 +66,6 @@ workflows:
         script: |
           cd frontend
           npm install
-      
-      - name: Install Capacitor iOS
-        script: |
-          cd frontend
           npm install @capacitor/ios
       
       - name: Build web app
@@ -79,15 +73,12 @@ workflows:
           cd frontend
           npm run build
       
-      - name: Add iOS platform and sync
+      - name: Setup iOS
         script: |
           cd frontend
-          npx cap add ios || true
+          npx cap add ios || echo "iOS platform may already exist"
           npx cap sync ios
-      
-      - name: Install CocoaPods
-        script: |
-          cd frontend/ios/App
+          cd ios/App
           pod install
       
       - name: Set up code signing
